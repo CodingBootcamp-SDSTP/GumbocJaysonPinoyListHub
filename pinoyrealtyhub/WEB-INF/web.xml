@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<web-app>
+	<display-name>REBrokerXchange</display-name>
+	<description>Phlippine Real Estate Hub</description>
+	<servlet>
+		<servlet-name>Listing</servlet-name>
+		<servlet-class>ListingServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Listing</servlet-name>
+		<url-paatern>/listings</url-paatern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Broker</servlet-name>
+		<servlet-class>BrokerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Broker</servlet-name>
+		<url-paatern>/brokers</url-paatern>
+	</servlet-mapping>
+</web-app>
