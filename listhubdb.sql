@@ -61,24 +61,3 @@ INSERT INTO tblproperty (id, propertyname, propertytype, locationid, floorarea, 
 INSERT INTO tblproperty (id, propertyname, propertytype, locationid, floorarea, lotsize, price, roomnumber, salesrep) VALUES 
 						("2018-003", 2600000, "Student Towers", "Residential", "2001", 26, 00, 1, "rent-to-own, with balcony", "2018-002");
 
-
-/*DROP TABLE IF EXISTS assetstable;
-CREATE TABLE assetstable (
-	id INTEGER AUTO_INCREMENT, 
-	name  VARCHAR(25) NOT NULL,
-	price INTEGER(11) NOT NULL,
-	locationid VARCHAR(25),
-	assignedto VARCHAR(25),
-	type VARCHAR(25) NOT NULL,
-	PRIMARY KEY(id),
-	FOREIGN KEY(locationid) REFERENCES locationtable(id),
-	FOREIGN KEY(assignedto) REFERENCES persontable(id)
-);
-INSERT INTO assetstable (name, price, locationid, assignedto, type) VALUES ("Building 1", "1000000000", "3019", "2018-01-003", "Building");
-INSERT INTO assetstable (name, price, locationid, assignedto, type) VALUES ("Building 2", "1500000000", "3020", "2018-01-002", "Building");
-INSERT INTO assetstable (name, price, locationid, assignedto, type) VALUES ("Table 1", "15000", "3018", "2018-01-003", "Table");
-INSERT INTO assetstable (name, price, locationid, assignedto, type) VALUES ("Table 2", "20000", "3019", "2018-01-001", "Table");
-INSERT INTO assetstable (name, price, locationid, assignedto, type) VALUES ("MS Office", "6000", "3020", "2018-01-001", "Software License");
-INSERT INTO assetstable (name, price, locationid, assignedto, type) VALUES ("Windows", "6000", "3018", "2018-01-002", "Software License");*/
-
-
