@@ -80,6 +80,11 @@ public class Property
 		return(otherDetails);
 	}
 
+	public String toString() {
+		return("ID: " + ID + ", Price: " + price + ", Property Name: " + propertyName + ", Property Type: " + propertyType + 
+			", Floor Area: " + floorArea + ", Lot Size: " + lotSize + ", Number of rooms: " + roomNumber + ", Other Details: " + otherDetails);
+	}
+
 	public String getDetails() {
 		return("ID" + "@" + price + "@" + propertyName + "@" + propertyType + "@" + floorArea + "@" + lotSize + "@" + roomNumber+ "@" + otherDetails   + "@property");
 	}

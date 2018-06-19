@@ -3,11 +3,21 @@
 	<display-name>PinoyListHub</display-name>
 	<description>Your Phlippine Real Estate Connection</description>
 	<servlet>
-		<servlet-name>Listing</servlet-name>
-		<servlet-class>PropertyServlet</servlet-class>
+		<servlet-name>PropertyListings</servlet-name>
+		<servlet-class>PropertyListingsServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>Listing</servlet-name>
+		<servlet-name>PropertyListings</servlet-name>
 		<url-pattern>/listings</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>PropertySpecialist</servlet-name>
+		<servlet-class>PropertySpecialistServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PropertySpecialist</servlet-name>
+		<url-pattern>/specialist</url-pattern>
+	</servlet-mapping>
 </web-app>
+
+

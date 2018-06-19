@@ -60,7 +60,7 @@ public class Person
 		return(contactDetails);
 	}
 
-	public String getDetails() {
+	/*public String getDetails() {
 		return("ID" + "@" + specialty + "@" + firstName + "@" + lastName + "@" + licenseNumber + "@" + contactDetails + "@person");
-	}
+	}*/
 }

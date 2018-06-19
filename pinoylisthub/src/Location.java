@@ -60,7 +60,7 @@ public class Location
 		return(code);
 	}
 
-	public String getDetails() {
+	/*public String getDetails() {
 		return(ID + "@" + street + "@" + barangay + "@" + city + "@" + country + "@" + code + "@location");
-	}
+	}*/
 }

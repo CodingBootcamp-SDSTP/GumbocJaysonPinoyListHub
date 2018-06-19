@@ -40,24 +40,21 @@ INSERT INTO tbllocation (id, street, barangay,  city, country, code) VALUES
 
 DROP TABLE IF EXISTS tblproperty;
 CREATE TABLE tblproperty(
-	id VARCHAR(25) NOT NULL,
+	id INTEGER AUTO_INCREMENT,
 	price  INTEGER(11) NOT NULL,
 	propertyname  VARCHAR(25) NOT NULL,
 	propertytype  VARCHAR(25) NOT NULL,
-	locationid VARCHAR(25),
 	floorarea INTEGER(11) NOT NULL,
 	lotsize INTEGER(11) NOT NULL,
 	roomnumber  INTEGER(11) NOT NULL,
 	otherdetails VARCHAR(25) NOT NULL,
-	salesrep VARCHAR(25),
-	PRIMARY KEY(id),
-	FOREIGN KEY(locationid) REFERENCES tbllocation(id),
-	FOREIGN KEY(salesrep) REFERENCES tblperson(id)
+	PRIMARY KEY(id)
 );
-INSERT INTO tblproperty (id, price, propertyname, propertytype, locationid, floorarea, lotsize, roomnumber, otherdetails, salesrep) VALUES 
-						("2018-001", 2600000, "Student Towers", "Residential", "2001", 26, 00, 1, "window view", "2018-005");
-INSERT INTO tblproperty (id, propertyname, propertytype, locationid, floorarea, lotsize, price, roomnumber, salesrep) VALUES 
-						("2018-002", 2500000, "Student Towers", "Residential", "2001", 23, 00, 1, "pool view", "2018-003");
-INSERT INTO tblproperty (id, propertyname, propertytype, locationid, floorarea, lotsize, price, roomnumber, salesrep) VALUES 
-						("2018-003", 2600000, "Student Towers", "Residential", "2001", 26, 00, 1, "rent-to-own, with balcony", "2018-002");
+
+INSERT INTO tblproperty (price, propertyname, propertytype, floorarea, lotsize, roomnumber, otherdetails) VALUES 
+						(2600000, "Student Towers", "Residential", 26, 00, 1, "window view");
+INSERT INTO tblproperty (price, propertyname, propertytype, floorarea, lotsize, roomnumber, otherdetails) VALUES 
+						(2500000, "Student Towers", "Residential", 23, 00, 1, "pool view");
+INSERT INTO tblproperty (price, propertyname, propertytype, floorarea, lotsize, roomnumber, otherdetails) VALUES 
+						(2600000, "Student Towers", "Residential", 26, 00, 1, "rent-to-own, with balcony");
 
