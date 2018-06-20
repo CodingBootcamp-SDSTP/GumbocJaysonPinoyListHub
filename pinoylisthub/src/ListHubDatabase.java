@@ -40,7 +40,6 @@ public class ListHubDatabase
 
 	public Connection connectdb() {
 		Connection v = null;
-		Statement stmt = null;
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			v = DriverManager.getConnection("jdbc:mysql://localhost/listdb?user=json&" +
@@ -50,9 +49,6 @@ public class ListHubDatabase
 			v = null;
 			e.printStackTrace();
 		}
-		finally {
- 			try { if (stmt != null) stmt.close(); } catch (Exception e) {};
- 		}
 		return(v);
 	}
 
@@ -148,8 +144,7 @@ public class ListHubDatabase
 			rs = stmt.executeQuery();
 			while(rs.next()) {
 				String[] p = {
-					rs.getString("id"), 
-					rs.getString("firstname"), 
+					rs.getString("id"),
 					rs.getString("specialty"), 
 					rs.getString("firstname"), 
 					rs.getString("lastname"), 
@@ -169,7 +164,8 @@ public class ListHubDatabase
 					rs.getString("city"), 
 					rs.getString("country"), 
 					rs.getString("code"), 
-					"location"};
+					"location"
+				};
 				createObject(l);
 			}
 			stmt = conn.prepareStatement("SELECT * FROM tblproperty");
@@ -179,13 +175,12 @@ public class ListHubDatabase
 					Integer.toString(rs.getInt("id")), 
 					Integer.toString(rs.getInt("price")), 
 					rs.getString("propertyname"), 
-					rs.getString("propertytype"), 
-					rs.getString("locationid"),
+					rs.getString("propertytype"),
 					Integer.toString(rs.getInt("floorarea")), 
 					Integer.toString(rs.getInt("lotsize")), 
 					Integer.toString(rs.getInt("roomnumber")), 
 					rs.getString("otherdetails"), 
-					rs.getString("salesrep")
+					"property"
 				};
 				createObject(py);
 			}
@@ -216,7 +211,7 @@ public class ListHubDatabase
 			properties.addProperty(p);
 		}
 	}
-	
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
 	public String getCollectionContent() {
 		ArrayList<Person> p = persons.getAllPersons();
 		ArrayList<Location> l = locations.getAllLocations();
